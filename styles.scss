@@ -22,4 +22,93 @@ $barlow: "Barlow Semi Condensed", sans-serif;
 body {
 	font-size: 13px;
 	font-family: $barlow;
+	background-color: $lightGrayishBlue;
+}
+
+// width: 443
+.testimonials {
+	display: grid;
+	gap: 1.5rem;
+	margin: 5rem auto;
+	max-width: 396px;
+
+	.testimonial {
+		display: grid;
+		grid-template-columns: min-content auto;
+		grid-template-rows: repeat(3, auto);
+		padding: 1.5rem 2rem 2rem 2rem;
+		border-radius: 10px;
+		z-index: 1;
+		// max-width: 396px;
+		.profile-pic {
+			display: block;
+			width: 40px;
+			border-radius: 50%;
+			margin-right: 1.25rem;
+		}
+		div {
+			align-self: center;
+		}
+		h4 {
+		}
+		.verified {
+			opacity: 0.5;
+			margin-top: 0.1rem;
+		}
+		h1 {
+			grid-column: 1 / span 2;
+			margin: 1.25rem 0;
+			line-height: 1.25;
+			font-size: 1.5rem;
+			padding-right: 1.1rem;
+		}
+		p {
+			grid-column: 1 / span 2;
+			opacity: 0.7;
+			font-size: 1rem;
+			padding-right: 0.55rem;
+			line-height: 1.25;
+		}
+	}
+
+	.testimonial:first-child {
+		background-color: $moderateViolet;
+		color: $white;
+		position: relative;
+
+		.bg-quote {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translateX(-30%);
+			width: 125px;
+			z-index: -1;
+		}
+
+		p {
+			padding-right: 1.6rem;
+		}
+	}
+	.testimonial:nth-child(2) {
+		background-color: $veryDarkGrayishBlue;
+		color: $white;
+	}
+	.testimonial:nth-child(3) {
+		background-color: $white;
+		color: $veryDarkGrayishBlue;
+	}
+	.testimonial:nth-child(4) {
+		background-color: $veryDarkBlackishBlue;
+		color: $white;
+	}
+	.testimonial:last-child {
+		background-color: $white;
+		color: $veryDarkGrayishBlue;
+	}
+}
+
+@media (max-width: 400px) {
+	.testimonials {
+		padding: 0 1.5rem;
+	}
 }

@@ -8,6 +8,87 @@
 body {
   font-size: 13px;
   font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: #ecf2f8;
+}
+
+.testimonials {
+  display: grid;
+  gap: 1.5rem;
+  margin: 5rem auto;
+  max-width: 396px;
+}
+.testimonials .testimonial {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: repeat(3, auto);
+  padding: 1.5rem 2rem 2rem 2rem;
+  border-radius: 10px;
+  z-index: 1;
+}
+.testimonials .testimonial .profile-pic {
+  display: block;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 1.25rem;
+}
+.testimonials .testimonial div {
+  align-self: center;
+}
+.testimonials .testimonial .verified {
+  opacity: 0.5;
+  margin-top: 0.1rem;
+}
+.testimonials .testimonial h1 {
+  grid-column: 1/span 2;
+  margin: 1.25rem 0;
+  line-height: 1.25;
+  font-size: 1.5rem;
+  padding-right: 1.1rem;
+}
+.testimonials .testimonial p {
+  grid-column: 1/span 2;
+  opacity: 0.7;
+  font-size: 1rem;
+  padding-right: 0.55rem;
+  line-height: 1.25;
+}
+.testimonials .testimonial:first-child {
+  background-color: #7541c8;
+  color: white;
+  position: relative;
+}
+.testimonials .testimonial:first-child .bg-quote {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-30%);
+  width: 125px;
+  z-index: -1;
+}
+.testimonials .testimonial:first-child p {
+  padding-right: 1.6rem;
+}
+.testimonials .testimonial:nth-child(2) {
+  background-color: #48556a;
+  color: white;
+}
+.testimonials .testimonial:nth-child(3) {
+  background-color: white;
+  color: #48556a;
+}
+.testimonials .testimonial:nth-child(4) {
+  background-color: #19212e;
+  color: white;
+}
+.testimonials .testimonial:last-child {
+  background-color: white;
+  color: #48556a;
+}
+
+@media (max-width: 400px) {
+  .testimonials {
+    padding: 0 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
