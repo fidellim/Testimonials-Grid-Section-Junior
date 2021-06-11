@@ -38,6 +38,7 @@ body {
 		grid-template-rows: repeat(3, auto);
 		padding: 1.5rem 2rem 2rem 2rem;
 		border-radius: 10px;
+		box-shadow: 10px 10px 30px -10px $lightGray;
 		z-index: 1;
 		// max-width: 396px;
 		.profile-pic {
@@ -110,5 +111,56 @@ body {
 @media (max-width: 400px) {
 	.testimonials {
 		padding: 0 1.5rem;
+	}
+}
+
+@media (max-width: 1310px) {
+	.testimonials {
+		padding: 0 1.5rem;
+	}
+}
+
+@media (min-width: 985px) {
+	.testimonials {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, auto);
+		margin: 10rem auto;
+		max-width: 1300px;
+
+		.testimonial {
+			padding: 1.5rem 2rem 2rem 2rem;
+			h1 {
+				padding-right: 0.55rem;
+				margin: 0.75rem 0;
+			}
+			div {
+				align-self: flex-start;
+			}
+		}
+		.testimonial:first-child {
+			grid-column: 1 / span 2;
+			grid-row: 1 / span 1;
+
+			.bg-quote {
+				transform: translateX(-90%);
+				width: 115px;
+			}
+		}
+		.testimonial:nth-child(2) {
+			grid-column: 3 / span 1;
+			grid-row: 1 / span 1;
+		}
+		.testimonial:nth-child(3) {
+			grid-column: 1 / span 1;
+			grid-row: 2 / span 1;
+		}
+		.testimonial:nth-child(4) {
+			grid-column: 2 / span 2;
+			grid-row: 2 / span 1;
+		}
+		.testimonial:last-child {
+			grid-column: 4 / span 1;
+			grid-row: 1 / span 2;
+		}
 	}
 }
